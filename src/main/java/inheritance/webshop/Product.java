@@ -22,7 +22,19 @@ package inheritance.webshop;
  */
 public class Product {
 
+    private String title;
+    private String description;
+    private double price;
+
     public Product(String title, String description, double price) {
+            this.title = title;
+            this.description = description;
+            this.price = price
         // TODO: add instance variables and complete the constructor
     }
+
+    public String getTitle(){
+        return title;
+    }
+    
 }
