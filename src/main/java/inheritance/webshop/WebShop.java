@@ -47,7 +47,7 @@ public class WebShop {
      * @return true if the given object is a Vehicle, false otherwise
      */
     public boolean isVehicle(Object obj) {
-        return obj instanceof Product; // TODO: implement this method
+        return obj instanceof Vehicle; // TODO: implement this method
     }
 
     /**
