@@ -1,5 +1,9 @@
 package inheritance.webshop;
 
+import java.util.Locale;
+
+import interfaces.markdown.MarkdownExport;
+
 /**
  * This class represents products in a webshop application. The class will be
  * used as a base class for various product types in the next parts of the
@@ -20,7 +24,7 @@ package inheritance.webshop;
  * Note that this class itself does not utilize inheritance, but it will
  * extended by other classes in the exercise.
  */
-public class Product {
+public class Product implements MarkdownExport {
 
     private final String title;
     private final String description;
@@ -50,6 +54,10 @@ public class Product {
         return title + ", " + description +  " " + price;
     }
 
-
-    
+    @Override
+    public String exportMarkdown() {
+     return "# " + title + "\n\n"
+            + description + "\n\n"
+            + "Price: " + String.format(Locale.US, "%.2f", price);
+    }   
 }
