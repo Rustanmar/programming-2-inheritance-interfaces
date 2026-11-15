@@ -19,10 +19,19 @@ package inheritance.webshop;
  *
  * Read more at https://dev.java/learn/inheritance/
  */
-public class Vehicle {
+public class Vehicle extends Product {
+
+    private String manufacturer;
+    private String model;
+    private int year;
 
     public Vehicle(String title, String description, double price, String manufacturer, String model,
             int year) {
+
+            super(title, description, price);
+            this.manufacturer = manufacturer;
+            this.model = model;
+            this.year = year;
         /*
          * TODO: complete the constructor
          *

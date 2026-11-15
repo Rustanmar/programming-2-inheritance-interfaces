@@ -13,6 +13,36 @@ package inheritance.webshop;
  * also skip this class and continue with the next part of the exercise if you
  * feel that you have understood the concept of inheritance.
  */
-public class Apartment {
+public class Apartment extends Product {
+
+    private int sqm;
+    private int floorNumber;
+
+    public Apartment(String title, String description, double price, int sqm, int floorNumber){
+        super(title, description, sqm);
+        this.sqm = sqm;
+        this.floorNumber = floorNumber;
+    }
+
+    public void setSqm(int sqm){
+        this.sqm = sqm;
+    }
+
+    public void setFloorNumber(int floorNumber){
+        this.floorNumber = floorNumber;
+    }
+
+    public int getSqm(){
+        return sqm;
+    }
+
+    public int getFloorNumber(){
+        return floorNumber;
+    }
+
+    @Override 
+    public String toString(){
+        return super.toString() + ", " + sqm + "/m2 ," + floorNumber;
+    }
 
 }
