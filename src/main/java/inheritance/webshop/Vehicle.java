@@ -33,11 +33,15 @@ public class Vehicle extends Product {
             this.model = model;
             this.year = year;
         /*
-         * TODO: complete the constructor
+         * 
          *
          * Make sure to call the constructor of the superclass to initialize the
          * inherited instance variables (title, description and price). The other three
          * parameters should be stored in new instance variables in this class.
          */
+    }
+
+    public String toString(){
+        return super.toString() + manufacturer + model + year;
     }
 }
