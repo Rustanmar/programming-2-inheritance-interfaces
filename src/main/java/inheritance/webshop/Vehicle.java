@@ -41,6 +41,30 @@ public class Vehicle extends Product {
          */
     }
 
+    public void setManufacturer(String manufacturer){
+        this.manufacturer = manufacturer;
+    }
+
+    public void setModel(String model){
+        this.model = model;
+    }
+
+    public void setYear(int year){
+        this.year = year;
+    }
+
+    public String getManufacturer(){
+        return manufacturer;
+    }
+
+    public String getModel(){
+        return model;
+    }
+
+    public int getYear(){
+        return year;
+    }
+
     public String toString(){
         return super.toString() + manufacturer + model + year;
     }
